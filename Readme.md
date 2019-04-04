@@ -2,9 +2,9 @@
 *Files to look at*:
 
 * **[Default.aspx](./CS/E5095/Default.aspx) (VB: [Default.aspx](./VB/E5095/Default.aspx))**
-* [Default.aspx.cs](./CS/E5095/Default.aspx.cs) (VB: [Default.aspx](./VB/E5095/Default.aspx))
+* [Default.aspx.cs](./CS/E5095/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/E5095/Default.aspx.vb))
 * [PdfViewer.ascx](./CS/E5095/PdfViewer.ascx) (VB: [PdfViewer.ascx](./VB/E5095/PdfViewer.ascx))
-* [PdfViewer.ascx.cs](./CS/E5095/PdfViewer.ascx.cs) (VB: [PdfViewer.ascx](./VB/E5095/PdfViewer.ascx))
+* [PdfViewer.ascx.cs](./CS/E5095/PdfViewer.ascx.cs) (VB: [PdfViewer.ascx.vb](./VB/E5095/PdfViewer.ascx.vb))
 <!-- default file list end -->
 # How to implement a simple PDF viewer in web ASP.NET WebForms applications by using the Document Server functionality
 
