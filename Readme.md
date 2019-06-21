@@ -7,6 +7,9 @@
 * [PdfViewer.ascx.cs](./CS/E5095/PdfViewer.ascx.cs) (VB: [PdfViewer.ascx.vb](./VB/E5095/PdfViewer.ascx.vb))
 <!-- default file list end -->
 # How to implement a simple PDF viewer in web ASP.NET WebForms applications by using the Document Server functionality
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/e5095/)**
+<!-- run online end -->
 
 
 <p>This example demonstrates how to implement a custom web PDF viewer control by using the DevExpress Document Server functionality.</p><br />
