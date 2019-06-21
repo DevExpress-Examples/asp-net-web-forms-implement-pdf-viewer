@@ -7,6 +7,9 @@
 * [PdfViewer.ascx.cs](./CS/PdfViewer.ascx.cs) (VB: [PdfViewer.ascx.vb](./VB/PdfViewer.ascx.vb))
 <!-- default file list end -->
 # How to implement a simple PDF viewer in web ASP.NET WebForms applications by using the Office File API functionality
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/e5095/)**
+<!-- run online end -->
 
 
 <p>This example demonstrates how to implement a custom web PDF viewer control by using the Office File API functionality.</p><br />
