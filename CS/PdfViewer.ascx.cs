@@ -51,10 +51,15 @@ namespace E5095 {
                 return _pdfFilePath;
             }
             set {
-                _pdfFilePath = value;
-                if (!String.IsNullOrEmpty(value)) {
-                    DocumentProcessor.LoadDocument(Server.MapPath(value));
-                    BindDataView();
+                try {
+                    _pdfFilePath = value;
+                    if (!String.IsNullOrEmpty(value)) {
+                        DocumentProcessor.LoadDocument(Server.MapPath(value), true);
+                        BindDataView();
+                    }
+                }
+                catch (Exception ex) {
+                    ShowError(String.Format("File Loading Failed: {0}", ex.Message));
                 }
             }
         }
@@ -64,12 +69,17 @@ namespace E5095 {
                 return _pdfData;
             }
             set {
-                _pdfData = value;
-                if (value != null) {
-                    using (MemoryStream stream = new MemoryStream(value)) {
-                        DocumentProcessor.LoadDocument(stream);
-                        BindDataView();
+                try {
+                    _pdfData = value;
+                    if (value != null) {
+                        using (MemoryStream stream = new MemoryStream(value)) {
+                            DocumentProcessor.LoadDocument(stream, true);
+                            BindDataView();
+                        }
                     }
+                }
+                catch (Exception ex) {
+                    ShowError(String.Format("File Loading Failed: {0}", ex.Message));
                 }
             }
         }
@@ -85,12 +95,13 @@ namespace E5095 {
                 dvDocument.DataSource = data;
                 dvDocument.DataBind();
             }
+            lbErrorMessage.Text = String.Empty;
         }
 
         protected void bimPdfPage_DataBinding(object sender, EventArgs e) {
             ASPxBinaryImage image = sender as ASPxBinaryImage;
             DataViewItemTemplateContainer container = image.NamingContainer as DataViewItemTemplateContainer;
-            int pageNumber = (int) container.EvalDataItem("PageNumber");
+            int pageNumber = (int)container.EvalDataItem("PageNumber");
 
             using (Bitmap bitmap = DocumentProcessor.CreateBitmap(pageNumber, 900)) {
                 using (MemoryStream stream = new MemoryStream()) {
@@ -106,6 +117,12 @@ namespace E5095 {
                 get;
                 set;
             }
+        }
+
+        protected void ShowError(string message) {
+            dvDocument.DataSource = null;
+            dvDocument.DataBind();
+            lbErrorMessage.Text = message;
         }
     }
 }
