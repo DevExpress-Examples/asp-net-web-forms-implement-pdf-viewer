@@ -3,25 +3,47 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E5095)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
+# PDF Document API for ASP.NET Web Forms- How to implement a PDF viewer
+
+This example demonstrates how to use the [Office File API](https://docs.devexpress.com/OfficeFileAPI/14911/office-file-api) and [ASP.NET Web Forms Controls](https://docs.devexpress.com/AspNet/7873/aspnet-webforms-controls) to implement a custom PDF viewer. This PDF viewer displays a PDF document's content and allows users to navigate through document pages.
+
+![PDF viewer control](pdf-viewer-control.png)
+
+## Overview
+
+Use the following classes to implement the PDF viewer:
+
+[PdfDocumentProcessor](https://docs.devexpress.com/OfficeFileAPI/DevExpress.Pdf.PdfDocumentProcessor)
+:   Allows you to manage PDF files. The **PdfDocumentProcessor**'s [LoadDocument](https://docs.devexpress.com/OfficeFileAPI/DevExpress.Pdf.PdfDocumentProcessor.LoadDocument(System.IO.Stream-System.Boolean)) method opens a PDF document and the [CreateBitmap](https://docs.devexpress.com/OfficeFileAPI/DevExpress.Pdf.PdfDocumentProcessor.CreateBitmap(System.Int32-System.Int32)) method converts the document's pages to images.
+
+[ASPxBinaryImage](https://docs.devexpress.com/AspNet/11646/components/data-editors/binaryimage)
+:   Displays a PDF document's pages as images.
+
+[ASPxDataView](https://docs.devexpress.com/AspNet/8280/components/data-and-image-navigation/dataview)
+:   Allows users to navigate through pages.
+
+[ASPxUploadControl](https://docs.devexpress.com/AspNet/8298/components/file-management/file-upload)
+:   Allows users to upload a PDF document to the server.
+
+[ASPxCallbackPanel](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxCallbackPanel)
+:   Opens a document in the PDF viewer after a user uploads the PDF document to the server.
+
 <!-- default file list -->
-*Files to look at*:
 
-* **[Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))**
-* [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
-* [PdfViewer.ascx](./CS/PdfViewer.ascx) (VB: [PdfViewer.ascx](./VB/PdfViewer.ascx))
-* [PdfViewer.ascx.cs](./CS/PdfViewer.ascx.cs) (VB: [PdfViewer.ascx.vb](./VB/PdfViewer.ascx.vb))
+## Files to Look At
+
+* [Default.aspx](./CS/E5095/Default.aspx) (VB: [Default.aspx](./VB/E5095/Default.aspx))
+* [Default.aspx.cs](./CS/E5095/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/E5095/Default.aspx.vb))
+* [PdfViewer.ascx](./CS/E5095/PdfViewer.ascx) (VB: [PdfViewer.ascx](./VB/E5095/PdfViewer.ascx))
+* [PdfViewer.ascx.cs](./CS/E5095/PdfViewer.ascx.cs) (VB: [PdfViewer.ascx.vb](./VB/E5095/PdfViewer.ascx.vb))
+
 <!-- default file list end -->
-# How to implement a simple PDF viewer in web ASP.NET WebForms applications by using the Office File API functionality
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/e5095/)**
-<!-- run online end -->
 
+## Documentation
 
-<p>This example demonstrates how to implement a custom web PDF viewer control by using the Office File API functionality.</p><br />
-<p>The main idea of this approach is to use the <a href="http://documentation.devexpress.com/#DocumentServer/DevExpressPdfPdfDocumentProcessorMembersTopicAll"><u>PdfDocumentProcessor</u></a> class functionality to load the PDF document and convert its pages to images. Then, these images are rendered in the browser to display PDF document pages.</p><br />
-<p><strong>Important Note:</strong></p><p>The <strong>Office File API</strong> product license is required for using this approach. Please refer to the <a href="https://www.devexpress.com/Subscriptions/"><u>Subscriptions</u></a> page for more information.</p><p><strong>See also:</strong><br />
-<a href="https://www.devexpress.com/Support/Center/p/E5101">How to implement a simple PDF viewer in ASP.NET MVC web application by using the Office File API functionality</a></p>
+- [PDF Document API](https://docs.devexpress.com/OfficeFileAPI/16491/pdf-document-api)
+- [How to Export a PDF Document to a Bitmap](https://docs.devexpress.com/OfficeFileAPI/120344/pdf-document-api/examples/export-a-pdf-document-to-an-image/how-to-export-a-pdf-document-to-a-bitmap)
 
-<br/>
+## More Examples
 
-
+- [PDF Document API for ASP.NET MVC Extensions - How to implement a PDF viewer](https://www.devexpress.com/Support/Center/p/E5101)
