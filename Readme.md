@@ -32,10 +32,10 @@ Opens a document in the PDF viewer after a user uploads the PDF document to the 
 
 ## Files to Look At
 
-* [Default.aspx](./CS/E5095/Default.aspx) (VB: [Default.aspx](./VB/E5095/Default.aspx))
-* [Default.aspx.cs](./CS/E5095/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/E5095/Default.aspx.vb))
-* [PdfViewer.ascx](./CS/E5095/PdfViewer.ascx) (VB: [PdfViewer.ascx](./VB/E5095/PdfViewer.ascx))
-* [PdfViewer.ascx.cs](./CS/E5095/PdfViewer.ascx.cs) (VB: [PdfViewer.ascx.vb](./VB/E5095/PdfViewer.ascx.vb))
+* [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
+* [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
+* [PdfViewer.ascx](./CS/PdfViewer.ascx) (VB: [PdfViewer.ascx](./VB/PdfViewer.ascx))
+* [PdfViewer.ascx.cs](./CS/PdfViewer.ascx.cs) (VB: [PdfViewer.ascx.vb](./VB/PdfViewer.ascx.vb))
 
 <!-- default file list end -->
 
