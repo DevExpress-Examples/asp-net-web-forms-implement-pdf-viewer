@@ -59,11 +59,15 @@ Namespace E5095
             End Get
 
             Set(ByVal value As String)
-                Me._pdfFilePath = value
-                If Not System.[String].IsNullOrEmpty(value) Then
-                    Me.DocumentProcessor.LoadDocument(Me.Server.MapPath(value))
-                    Me.BindDataView()
-                End If
+                Try
+                    Me._pdfFilePath = value
+                    If Not System.[String].IsNullOrEmpty(value) Then
+                        Me.DocumentProcessor.LoadDocument(Me.Server.MapPath(value), True)
+                        Me.BindDataView()
+                    End If
+                Catch ex As System.Exception
+                    Me.ShowError(System.[String].Format("File Loading Failed: {0}", ex.Message))
+                End Try
             End Set
         End Property
 
@@ -73,13 +77,17 @@ Namespace E5095
             End Get
 
             Set(ByVal value As Byte())
-                Me._pdfData = value
-                If value IsNot Nothing Then
-                    Using stream As System.IO.MemoryStream = New System.IO.MemoryStream(value)
-                        Me.DocumentProcessor.LoadDocument(stream)
-                        Me.BindDataView()
-                    End Using
-                End If
+                Try
+                    Me._pdfData = value
+                    If value IsNot Nothing Then
+                        Using stream As System.IO.MemoryStream = New System.IO.MemoryStream(value)
+                            Me.DocumentProcessor.LoadDocument(stream, True)
+                            Me.BindDataView()
+                        End Using
+                    End If
+                Catch ex As System.Exception
+                    Me.ShowError(System.[String].Format("File Loading Failed: {0}", ex.Message))
+                End Try
             End Set
         End Property
 
@@ -93,6 +101,8 @@ Namespace E5095
                 Me.dvDocument.DataSource = data
                 Me.dvDocument.DataBind()
             End If
+
+            Me.lbErrorMessage.Text = System.[String].Empty
         End Sub
 
         Protected Sub bimPdfPage_DataBinding(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -111,5 +121,11 @@ Namespace E5095
 
             Public Property PageNumber As Integer
         End Class
+
+        Protected Sub ShowError(ByVal message As String)
+            Me.dvDocument.DataSource = Nothing
+            Me.dvDocument.DataBind()
+            Me.lbErrorMessage.Text = message
+        End Sub
     End Class
 End Namespace
