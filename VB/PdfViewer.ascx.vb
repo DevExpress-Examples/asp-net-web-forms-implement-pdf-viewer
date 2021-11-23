@@ -62,7 +62,7 @@ Namespace E5095
                 Try
                     Me._pdfFilePath = value
                     If Not System.[String].IsNullOrEmpty(value) Then
-                        Me.DocumentProcessor.LoadDocument(MyBase.Server.MapPath(value), True)
+                        Me.DocumentProcessor.LoadDocument(Me.Server.MapPath(value), True)
                         Me.BindDataView()
                     End If
                 Catch ex As System.Exception
