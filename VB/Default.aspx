@@ -20,9 +20,7 @@
         <dx:ASPxCallbackPanel ID="cbViewer" runat="server" ClientInstanceName="callbackPanel">
             <PanelCollection>
                 <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
-
                     <uc:PdfViewer ID="viewer" runat="server" PdfFilePath="FallCatalog.pdf" />
-
                 </dx:PanelContent>
             </PanelCollection>
         </dx:ASPxCallbackPanel>
