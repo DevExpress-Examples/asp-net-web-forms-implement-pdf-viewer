@@ -109,7 +109,6 @@ namespace E5095 {
                     image.ContentBytes = stream.ToArray();
                 }
             }
-
         }
 
         protected class PdfPageItem {
