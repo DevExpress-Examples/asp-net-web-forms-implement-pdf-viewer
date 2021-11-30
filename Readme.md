@@ -5,7 +5,9 @@
 <!-- default badges end -->
 # PDF Document API for ASP.NET Web Forms- How to implement a PDF viewer
 
-This example demonstrates how to use the [Office File API](https://docs.devexpress.com/OfficeFileAPI/14911/office-file-api) and [ASP.NET Web Forms Controls](https://docs.devexpress.com/AspNet/7873/aspnet-webforms-controls) to implement a custom PDF viewer. This PDF viewer displays a PDF document's content and allows users to navigate through document pages.
+This example demonstrates how to use the [Office File API](https://docs.devexpress.com/OfficeFileAPI/14911/office-file-api) and [ASP.NET Web Forms Controls](https://docs.devexpress.com/AspNet/7873/aspnet-webforms-controls) to implement a custom PDF viewer. This PDF viewer displays a PDF document's content as images and allows users to navigate through document pages.
+
+> You need an active license for the [DevExpress Office File API Subscription](https://www.devexpress.com/products/net/office-file-api/) or [DevExpress Universal Subscription](https://www.devexpress.com/subscriptions/universal.xml) to use the **Office File API** library in production code.
 
 ![PDF viewer control](pdf-viewer-control.png)
 
