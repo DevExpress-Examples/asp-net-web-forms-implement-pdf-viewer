@@ -1,17 +1,15 @@
-﻿Imports System
-Imports System.Collections.Generic
-Imports System.Linq
-Imports System.Web
+Imports System
 Imports System.Web.UI
 Imports System.Web.UI.WebControls
 
 Namespace E5095
-    Partial Public Class [Default]
-        Inherits System.Web.UI.Page
+
+    Public Partial Class [Default]
+        Inherits Page
 
         Protected Sub Page_Init(ByVal sender As Object, ByVal e As EventArgs)
             If Session("PdfFile") IsNot Nothing Then
-                viewer.PdfData = DirectCast(Session("PdfFile"), Byte())
+                viewer.PdfData = CType(Session("PdfFile"), Byte())
             End If
         End Sub
 

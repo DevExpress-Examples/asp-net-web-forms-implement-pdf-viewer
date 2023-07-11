@@ -1,4 +1,4 @@
-﻿<%@ Control Language="vb" AutoEventWireup="true" CodeBehind="PdfViewer.ascx.vb" Inherits="E5095.PdfViewer" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PdfViewer.ascx.cs" Inherits="E5095.PdfViewer" %>
 <dx:ASPxDataView ID="dvDocument" runat="server">
     <SettingsTableLayout ColumnCount="1" RowsPerPage="1" />
     <PagerSettings ShowNumericButtons="True">
